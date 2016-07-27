@@ -7,15 +7,18 @@ import android.view.View;
 
 public class SearchActivity extends AppCompatActivity {
 
+
+    public void search(View view) {
+        Intent resultsIntents = new Intent(this, ResultsActivity.class);
+
+        startActivity(resultsIntents);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
     }
 
-    public void search(View view) {
-        Intent resultsIntents = new Intent(this, ResultsActivity.class);
-        
-        startActivity(resultsIntents);
-    }
+
 }
